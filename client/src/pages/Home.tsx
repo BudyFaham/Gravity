@@ -324,7 +324,7 @@ export default function Home() {
         <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 lg:px-8">
           <a href="#top" className="group flex items-center gap-2.5" aria-label="العودة إلى بداية الصفحة">
             <div className="leading-tight">
-              <img src="/gravity-logo.png" alt="Gravity" className="h-7 w-auto max-w-[9rem] object-contain object-right" />
+              <img src={`${import.meta.env.BASE_URL}gravity-logo.svg`} alt="Gravity" className="h-7 w-auto max-w-[9rem] object-contain object-right" />
             </div>
           </a>
         </div>

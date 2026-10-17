@@ -1,7 +1,7 @@
 import { FormEvent, useEffect, useState } from "react";
 import { Clock3, LockKeyhole, Loader2, LogIn } from "lucide-react";
 
-const logoPath = "/gravity-logo.png";
+const logoPath = `${import.meta.env.BASE_URL}gravity-logo.svg`;
 type AuthState = "checking" | "login" | "pending" | "authenticated";
 
 export default function AuthGate({ children }: { children: React.ReactNode }) {
