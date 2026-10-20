@@ -196,7 +196,7 @@ export default function Home() {
     }
   });
 
-  const [sortNewest, setSortNewest] = useState(true);
+  const [sortNewest, setSortNewest] = useState(false);
   const [solutionFilter, setSolutionFilter] = useState<"حل المذكرة" | "حل كتاب الامتحان" | "حل الامتحانات الجزئية" | "حل الامتحانات الشاملة" | null>(null);
   const [viewMode, setViewMode] = useState<"grid" | "list">(() => {
     try {
@@ -304,13 +304,24 @@ export default function Home() {
 
   const allVideos = useMemo<Video[]>(() => [...videos, ...customVideos].map((video, index) => ({ ...video, number: index + 1 })), [customVideos]);
   const homeworkLookup = useMemo(() => ({ ...homeworkByVideo, ...Object.fromEntries(customVideos.map((video) => [video.id, video.homework || []])) }), [customVideos]);
+  const lectureNumberOf = (video: Video) => {
+    const match = video.title.match(/^محاضرة\s+(\d+)/);
+    return video.lectureNumber ?? (match ? Number(match[1]) : null);
+  };
   const visibleVideos = useMemo(() => {
     const normalized = query.trim().toLowerCase();
     return allVideos
       .filter((video) => activeFilter === "الكل" || video.section === activeFilter)
       .filter((video) => activeFilter !== "الحل" || (solutionFilter !== null && video.solutionGroup === solutionFilter))
       .filter((video) => !normalized || `${video.title} ${video.lesson}`.toLowerCase().includes(normalized))
-      .sort((a, b) => (sortNewest ? b.sortOrder - a.sortOrder : a.sortOrder - b.sortOrder));
+      .sort((a, b) => {
+        const aLecture = lectureNumberOf(a);
+        const bLecture = lectureNumberOf(b);
+        if (aLecture !== null && bLecture !== null && aLecture !== bLecture) return sortNewest ? bLecture - aLecture : aLecture - bLecture;
+        if (aLecture !== null && bLecture === null) return -1;
+        if (aLecture === null && bLecture !== null) return 1;
+        return sortNewest ? b.sortOrder - a.sortOrder : a.sortOrder - b.sortOrder;
+      });
   }, [activeFilter, allVideos, query, solutionFilter, sortNewest]);
 
   const currentYear = new Date().getFullYear();
