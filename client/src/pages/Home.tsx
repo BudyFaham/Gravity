@@ -62,6 +62,18 @@ const videos: Video[] = [
   { number: 18, sortOrder: 29, id: "T4HMAIXo3Qo", title: "محاضرة 17 — حل فصل 1 درس 2", category: "شرح", lesson: "الفصل الأول", section: "الحل", solutionGroup: "حل المذكرة" },
   { number: 19, sortOrder: 33, id: "iir90co7DKU", title: "محاضرة 18 — شرح فصل 1 درس 3", category: "شرح", lesson: "الفصل الأول", section: "الشرح" },
   { number: 37, sortOrder: 36, lectureNumber: 31, id: "Yn9JKOLD-LA", title: "محاضرة 31 — شرح فصل 2 درس 1", category: "شرح", lesson: "الفصل الثاني - الدرس الأول", section: "الشرح" },
+  { number: 38, sortOrder: 37, lectureNumber: 20, id: "VwYDbduZ7V4", title: "محاضرة 20 — جزء 1 حل فصل 1 درس 3", category: "شرح", lesson: "الفصل الأول - الدرس الثالث", section: "الحل", solutionGroup: "حل المذكرة" },
+  { number: 39, sortOrder: 38, lectureNumber: 20, id: "CP5A1kr2s-0", title: "محاضرة 20 — جزء 2 حل فصل 1 درس 3", category: "شرح", lesson: "الفصل الأول - الدرس الثالث", section: "الحل", solutionGroup: "حل المذكرة" },
+  { number: 40, sortOrder: 39, lectureNumber: 21, id: "g7rgiQ0wycY", title: "محاضرة 21 — تدريب هام — فصل 1 درس 2 و3", category: "شرح", lesson: "الفصل الأول - الدرس الثاني والثالث", section: "الشرح" },
+  { number: 41, sortOrder: 40, lectureNumber: 22, id: "FK--8Rjd7dk", title: "محاضرة 22 — أفكار شدة الإضاءة والقدرة الكهربية", category: "شرح", lesson: "الفصل الأول - الدرس الثاني والثالث", section: "الشرح" },
+  { number: 42, sortOrder: 41, lectureNumber: 23, id: "s9F036Igt5M", title: "محاضرة 23 — حل فصل 1 درس 3", category: "شرح", lesson: "الفصل الأول - الدرس الثالث", section: "الحل", solutionGroup: "حل المذكرة" },
+  { number: 43, sortOrder: 42, lectureNumber: 24, id: "X-8CqCy5r4Y", title: "محاضرة 24 — شرح فصل 1 درس 4 — قوانين كيرشوف", category: "شرح", lesson: "الفصل الأول - الدرس الرابع", section: "الشرح" },
+  { number: 44, sortOrder: 43, lectureNumber: 25, id: "RkGbgGV5BMA", title: "محاضرة 25 — شرح فصل 1 درس 4 — تابع أفكار قوانين كيرشوف", category: "شرح", lesson: "الفصل الأول - الدرس الرابع", section: "الشرح" },
+  { number: 45, sortOrder: 44, lectureNumber: 26, id: "jT93ygktVic", title: "محاضرة 26 — حل فصل 1 درس 4", category: "شرح", lesson: "الفصل الأول - الدرس الرابع", section: "الحل", solutionGroup: "حل المذكرة" },
+  { number: 46, sortOrder: 45, lectureNumber: 27, id: "-x05tBqFP-8", title: "محاضرة 27 — تابع حل فصل 1 درس 4", category: "شرح", lesson: "الفصل الأول - الدرس الرابع", section: "الحل", solutionGroup: "حل المذكرة" },
+  { number: 47, sortOrder: 46, lectureNumber: 28, id: "FeAbWLzogoo", title: "محاضرة 28 — تركات هامة على الفصل الأول", category: "شرح", lesson: "الفصل الأول", section: "الشرح" },
+  { number: 48, sortOrder: 47, lectureNumber: 29, id: "6eXhEKR4_-s", title: "محاضرة 29 — مراجعة على قوانين وملاحظات الفصل الأول", category: "شرح", lesson: "الفصل الأول", section: "الشرح" },
+  { number: 49, sortOrder: 48, lectureNumber: 30, id: "ve_JawoqRD4", title: "محاضرة 30 — شرح فصل 2 درس 1", category: "شرح", lesson: "الفصل الثاني - الدرس الأول", section: "الشرح" },
   { number: 20, sortOrder: 3, id: "nglsS4x01No", title: "حل إمتحان جزئي 1", category: "حل إمتحان جزئي", lesson: "حل إمتحان جزئي", section: "الحل", solutionGroup: "حل الامتحانات الجزئية" },
   { number: 21, sortOrder: 10, id: "twGf7a4YDxE", title: "حل إمتحان جزئي 2", category: "حل إمتحان جزئي", lesson: "حل إمتحان جزئي", section: "الحل", solutionGroup: "حل الامتحانات الجزئية" },
   { number: 22, sortOrder: 18, id: "Ogsv63dNJag", title: "حل إمتحان جزئي 3", category: "حل إمتحان جزئي", lesson: "حل إمتحان جزئي", section: "الحل", solutionGroup: "حل الامتحانات الجزئية" },
@@ -79,6 +91,11 @@ const videos: Video[] = [
   { number: 34, sortOrder: 30, id: "5w4X83rgKOM", title: "محاضرة 5 — حل كتاب الامتحان — الدرس 2، أسئلة 1–40", category: "شرح", lesson: "محاضرة 5", section: "الحل", solutionGroup: "حل كتاب الامتحان" },
   { number: 35, sortOrder: 34, id: "CnISfx_P14M", title: "محاضرة 19 — شرح فصل 1 درس 3 — الجزء الأول", category: "شرح", lesson: "محاضرة 19", section: "الشرح" },
   { number: 36, sortOrder: 35, id: "ekaTYuOkjLk", title: "محاضرة 19 — شرح فصل 1 درس 3 — الجزء الثاني", category: "شرح", lesson: "محاضرة 19", section: "الشرح" },
+  { number: 50, sortOrder: 49, id: "84TgA62b80A", title: "حل اختبار جزئي ٦", category: "حل إمتحان جزئي", lesson: "الاختبارات الجزئية", section: "الحل", solutionGroup: "حل الامتحانات الجزئية" },
+  { number: 51, sortOrder: 50, id: "dg_h93DBBiA", title: "حل اختبار جزئي ٧", category: "حل إمتحان جزئي", lesson: "الاختبارات الجزئية", section: "الحل", solutionGroup: "حل الامتحانات الجزئية" },
+  { number: 52, sortOrder: 51, id: "Su9uCgYUyI0", title: "حل اختبار جزئي ٨", category: "حل إمتحان جزئي", lesson: "الاختبارات الجزئية", section: "الحل", solutionGroup: "حل الامتحانات الجزئية" },
+  { number: 53, sortOrder: 52, id: "qvaSC9a-m2c", title: "حل امتحان شامل ٤", category: "حل إمتحان شامل", lesson: "الامتحانات الشاملة", section: "الحل", solutionGroup: "حل الامتحانات الشاملة" },
+  { number: 54, sortOrder: 53, id: "1b18JrUCBrE", title: "حل امتحان شامل ٥", category: "حل إمتحان شامل", lesson: "الامتحانات الشاملة", section: "الحل", solutionGroup: "حل الامتحانات الشاملة" },
 ];
 
 
@@ -120,6 +137,23 @@ const durations: Record<string, string> = {
   "2ERsax0wGzw": "51:10",
   "VX2G-TQyFCU": "51:49",
   "Yn9JKOLD-LA": "48:47",
+  "VwYDbduZ7V4": "11:05",
+  "CP5A1kr2s-0": "1:02:25",
+  "g7rgiQ0wycY": "1:17:12",
+  "FK--8Rjd7dk": "1:04:49",
+  "s9F036Igt5M": "1:28:29",
+  "X-8CqCy5r4Y": "50:19",
+  "RkGbgGV5BMA": "55:56",
+  "jT93ygktVic": "1:35:15",
+  "-x05tBqFP-8": "49:05",
+  "FeAbWLzogoo": "42:36",
+  "6eXhEKR4_-s": "58:51",
+  "ve_JawoqRD4": "1:02:04",
+  "84TgA62b80A": "12:10",
+  "dg_h93DBBiA": "10:27",
+  "Su9uCgYUyI0": "9:18",
+  "qvaSC9a-m2c": "1:03:20",
+  "1b18JrUCBrE": "55:07",
 };
 const sections = ["الكل", "الشرح", "الحل"] as const;
 
@@ -150,6 +184,12 @@ const homeworkByVideo: Record<string, string[]> = {
   "n9bU4aW33y0": ["المذكرة", "ص٩٣", "من ص ١٠٣ ل ١٠٥", "كتاب الامتحان", "من ص٥٥ ل ٦١"],
   "iir90co7DKU": ["المذكرة", "ص١٠٩ من رقم ١ ل ٤", "ص١١١ من رقم ١٨ ل ٢٠", "كتاب الامتحان", "من ص٨٦ ل ٨٨"],
   "Yn9JKOLD-LA": ["المذكرة ص٤١ ماعدا ١٧", "ص٤٢ ماعدا ٣٣ و٣٤", "كتاب الامتحان من ص١٣٩ ل١٤١"],
+  "RkGbgGV5BMA": ["المذكرة من ص١٢٧ ل ١٣٢", "كتاب الامتحان من ص١١٥ ل ١١٧"],
+  "X-8CqCy5r4Y": ["المذكرة ص١٢٥", "ص١٢٦ ماعدا ٨", "ص١٢٩", "كتاب الامتحان ص١١١", "ص١١٢ ماعدا ٩ و١٠", "ص١١٥ رقم ٢٧", "ص١١٦ رقم ٢٨"],
+  "FeAbWLzogoo": ["كتاب الامتحان من ص٦٥ ل ٨٤"],
+  "FK--8Rjd7dk": ["المذكرة من ص١١٢ ل ١١٥", "ومن ص١١٨ ل ١٢١", "كتاب الامتحان من ص٦٢ ل ٦٤", "من ص٩٤ ل ٩٦"],
+  "g7rgiQ0wycY": ["باقي مذكرة تدريب هام: أوجد R الكلية", "أوجد I", "أوجد V", "أوجد I و V كل مقاومة", "أوجد I الأسلاك", "المذكرة ص١١٦ و١١٧", "كتاب الامتحان ص٩٢ و٩٣"],
+  "ve_JawoqRD4": ["المذكرة ص٣٩ و٤٠", "كتاب الامتحان ص١٣٢ و١٣٣", "من ص٥٤ ل٦٣"],
 };
 
 const channelUrl = "https://www.youtube.com/@gravity-nouranelsanadiki";
