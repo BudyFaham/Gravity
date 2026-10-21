@@ -2,7 +2,7 @@ import { useMemo, useState } from "react";
 import { Check, Plus, Trash2, X } from "lucide-react";
 import type { CustomVideo } from "@/lib/customVideos";
 
-const categories: CustomVideo["category"][] = ["شرح", "حل إمتحان جزئي", "حل إمتحان شامل", "أساسيات"];
+const categories: CustomVideo["category"][] = ["شرح", "حل", "حل إمتحان جزئي", "حل إمتحان شامل"];
 const sections: CustomVideo["section"][] = ["الشرح", "الحل", "الاختبارات الجزئية", "الامتحانات الشاملة"];
 const solutionGroups: NonNullable<CustomVideo["solutionGroup"]>[] = ["حل المذكرة", "حل كتاب الامتحان", "حل الامتحانات الجزئية", "حل الامتحانات الشاملة"];
 
@@ -19,7 +19,7 @@ export default function VideoManagerPanel({ videos, nextSortOrder, onSave, onDel
     const id = form.id.trim().replace(/.*(?:youtu\.be\/|v=|embed\/)/, "").split(/[?&]/)[0];
     if (!id || !form.title.trim() || !form.duration.trim()) { setNotice("اكتب رابط/كود يوتيوب والعنوان والمدة أولًا."); return; }
     if (videos.some((video) => video.id === id)) { setNotice("الفيديو موجود بالفعل في المكتبة."); return; }
-    onSave({ number: 0, sortOrder: nextSortOrder, id, title: form.title.trim(), duration: form.duration.trim(), lesson: form.lesson.trim() || "فيديو جديد", category: form.category, section: form.section, solutionGroup: form.section === "الحل" ? form.solutionGroup : undefined, homework, description: form.description.trim() });
+    onSave({ number: 0, sortOrder: nextSortOrder, id, title: form.title.trim(), duration: form.duration.trim(), lesson: form.lesson.trim() || "فيديو جديد", category: form.section === "الحل" ? "حل" : form.category, section: form.section, solutionGroup: form.section === "الحل" ? form.solutionGroup : undefined, homework, description: form.description.trim() });
     setNotice("تمت إضافة الفيديو إلى المكتبة.");
     setForm((current) => ({ ...current, id: "", title: "", duration: "", homework: "", description: "" }));
   }

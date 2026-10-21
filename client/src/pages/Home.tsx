@@ -32,7 +32,7 @@ type Video = {
   lectureNumber?: number;
   id: string;
   title: string;
-  category: "شرح" | "حل إمتحان جزئي" | "حل إمتحان شامل" | "أساسيات";
+  category: "شرح" | "حل" | "حل إمتحان جزئي" | "حل إمتحان شامل" | "أساسيات";
   lesson: string;
   section: "الشرح" | "الاختبارات الجزئية" | "الامتحانات الشاملة" | "الحل";
   solutionGroup?: "حل المذكرة" | "حل كتاب الامتحان" | "حل الامتحانات الجزئية" | "حل الامتحانات الشاملة";
@@ -45,57 +45,57 @@ const videos: Video[] = [
   { number: 1, sortOrder: 4, id: "CFTqUwllwdU", title: "محاضرة ٠ - أساسيات ما قبل الفيزياء", category: "أساسيات", lesson: "تمهيد", section: "الشرح" },
   { number: 2, sortOrder: 0, id: "i45XNUbKUhI", title: "محاضرة ١ - شرح فصل ١ درس ١ - التيار الكهربي", category: "شرح", lesson: "الفصل الأول", section: "الشرح" },
   { number: 3, sortOrder: 1, id: "13IfG3sb4hs", title: "محاضرة ٢ - شرح فصل ١ درس ١ - فرق الجهد والمقاومة", category: "شرح", lesson: "الفصل الأول", section: "الشرح" },
-  { number: 4, sortOrder: 2, id: "HDw8tCZJFGo", title: "محاضرة ٣ - حل فصل ١ درس ١", category: "شرح", lesson: "الفصل الأول", section: "الحل", solutionGroup: "حل المذكرة" },
+  { number: 4, sortOrder: 2, id: "HDw8tCZJFGo", title: "محاضرة ٣ - حل فصل ١ درس ١", category: "حل", lesson: "الفصل الأول", section: "الحل", solutionGroup: "حل المذكرة" },
   { number: 5, sortOrder: 3, id: "aFKkxlpI5CE", title: "محاضرة ٤ - شرح فصل ١ درس ١", category: "شرح", lesson: "الفصل الأول", section: "الشرح" },
   { number: 6, sortOrder: 5, id: "XLKtw954Jvs", title: "محاضرة ٥ - شرح فصل ١ درس ٢", category: "شرح", lesson: "الفصل الأول", section: "الشرح" },
-  { number: 7, sortOrder: 6, id: "qGc1dpan0AY", title: "محاضرة ٦ - حل فصل ١ درس ١ - اختر", category: "شرح", lesson: "الفصل الأول", section: "الحل", solutionGroup: "حل المذكرة" },
-  { number: 8, sortOrder: 7, id: "VHd5f4Vxdo0", title: "محاضرة ٧ - حل فصل ١ درس ١ - المقالي", category: "شرح", lesson: "الفصل الأول", section: "الحل", solutionGroup: "حل المذكرة" },
+  { number: 7, sortOrder: 6, id: "qGc1dpan0AY", title: "محاضرة ٦ - حل فصل ١ درس ١ - اختر", category: "حل", lesson: "الفصل الأول", section: "الحل", solutionGroup: "حل المذكرة" },
+  { number: 8, sortOrder: 7, id: "VHd5f4Vxdo0", title: "محاضرة ٧ - حل فصل ١ درس ١ - المقالي", category: "حل", lesson: "الفصل الأول", section: "الحل", solutionGroup: "حل المذكرة" },
   { number: 9, sortOrder: 8, id: "51jPPukv_Sc", title: "محاضرة ٨ - شرح فصل ١ درس ٢", category: "شرح", lesson: "الفصل الأول", section: "الشرح" },
   { number: 10, sortOrder: 11, id: "e_bA-FH7Xdk", title: "محاضرة ٩ - شرح فصل ١ درس ٢", category: "شرح", lesson: "الفصل الأول", section: "الشرح" },
-  { number: 11, sortOrder: 13, id: "WiAU-Z55jCw", title: "محاضرة ١٠ - حل فصل ١ درس ٢", category: "شرح", lesson: "الفصل الأول", section: "الحل", solutionGroup: "حل المذكرة" },
+  { number: 11, sortOrder: 13, id: "WiAU-Z55jCw", title: "محاضرة ١٠ - حل فصل ١ درس ٢", category: "حل", lesson: "الفصل الأول", section: "الحل", solutionGroup: "حل المذكرة" },
   { number: 12, sortOrder: 14, id: "CfUeMuymrZE", title: "محاضرة ١١ - شرح فصل ١ درس ٢", category: "شرح", lesson: "الفصل الأول", section: "الشرح" },
   { number: 13, sortOrder: 15, id: "kHvHxaXMY3M", title: "محاضرة ١٢ - شرح فصل ١ درس ٢", category: "شرح", lesson: "الفصل الأول", section: "الشرح" },
-  { number: 14, sortOrder: 16, id: "lcHezHQkabY", title: "محاضرة ١٣ - حل فصل ١ درس ٢", category: "شرح", lesson: "الفصل الأول", section: "الحل", solutionGroup: "حل المذكرة" },
+  { number: 14, sortOrder: 16, id: "lcHezHQkabY", title: "محاضرة ١٣ - حل فصل ١ درس ٢", category: "حل", lesson: "الفصل الأول", section: "الحل", solutionGroup: "حل المذكرة" },
   { number: 15, sortOrder: 19, id: "AjfkuDxAtHg", title: "محاضرة ١٤ - شرح فصل ١ درس ٢", category: "شرح", lesson: "الفصل الأول", section: "الشرح" },
-  { number: 16, sortOrder: 21, id: "9IznvBdtXBM", title: "محاضرة ١٦ - شرح فصل ١ درس ٢", category: "شرح", lesson: "الفصل الأول", section: "الحل", solutionGroup: "حل المذكرة" },
-  { number: 17, sortOrder: 22, id: "n9bU4aW33y0", title: "محاضرة ١٧ - حل فصل ١ درس ٢", category: "شرح", lesson: "الفصل الأول", section: "الحل", solutionGroup: "حل المذكرة" },
-  { number: 18, sortOrder: 20, id: "T4HMAIXo3Qo", title: "محاضرة ١٥ - حل فصل ١ درس ٢", category: "شرح", lesson: "الفصل الأول", section: "الحل", solutionGroup: "حل المذكرة" },
+  { number: 16, sortOrder: 21, id: "9IznvBdtXBM", title: "محاضرة ١٦ - شرح فصل ١ درس ٢", category: "حل", lesson: "الفصل الأول", section: "الحل", solutionGroup: "حل المذكرة" },
+  { number: 17, sortOrder: 22, id: "n9bU4aW33y0", title: "محاضرة ١٧ - حل فصل ١ درس ٢", category: "حل", lesson: "الفصل الأول", section: "الحل", solutionGroup: "حل المذكرة" },
+  { number: 18, sortOrder: 20, id: "T4HMAIXo3Qo", title: "محاضرة ١٥ - حل فصل ١ درس ٢", category: "حل", lesson: "الفصل الأول", section: "الحل", solutionGroup: "حل المذكرة" },
   { number: 19, sortOrder: 24, id: "iir90co7DKU", title: "محاضرة ١٨ - شرح فصل ١ درس ٣", category: "شرح", lesson: "الفصل الأول", section: "الشرح" },
   { number: 37, sortOrder: 46, lectureNumber: 31, id: "Yn9JKOLD-LA", title: "محاضرة ٣١ - شرح فصل ٢ درس ١", category: "شرح", lesson: "الفصل الثاني - الدرس الأول", section: "الشرح" },
-  { number: 38, sortOrder: 29, lectureNumber: 20, id: "VwYDbduZ7V4", title: "محاضرة ٢٠ - حل فصل ١ درس ٣ - الجزء الأول", category: "شرح", lesson: "الفصل الأول - الدرس الثالث", section: "الحل", solutionGroup: "حل المذكرة" },
-  { number: 39, sortOrder: 30, lectureNumber: 20, id: "CP5A1kr2s-0", title: "محاضرة ٢٠ - حل فصل ١ درس ٣ - الجزء الثاني", category: "شرح", lesson: "الفصل الأول - الدرس الثالث", section: "الحل", solutionGroup: "حل المذكرة" },
+  { number: 38, sortOrder: 29, lectureNumber: 20, id: "VwYDbduZ7V4", title: "محاضرة ٢٠ - حل فصل ١ درس ٣ - الجزء الأول", category: "حل", lesson: "الفصل الأول - الدرس الثالث", section: "الحل", solutionGroup: "حل المذكرة" },
+  { number: 39, sortOrder: 30, lectureNumber: 20, id: "CP5A1kr2s-0", title: "محاضرة ٢٠ - حل فصل ١ درس ٣ - الجزء الثاني", category: "حل", lesson: "الفصل الأول - الدرس الثالث", section: "الحل", solutionGroup: "حل المذكرة" },
   { number: 40, sortOrder: 32, lectureNumber: 21, id: "g7rgiQ0wycY", title: "محاضرة ٢١ - فصل ١ درس ٢ و٣ - تدريب هام", category: "شرح", lesson: "الفصل الأول - الدرس الثاني والثالث", section: "الشرح" },
   { number: 41, sortOrder: 33, lectureNumber: 22, id: "FK--8Rjd7dk", title: "محاضرة ٢٢ - شرح فصل ١ درس ٢ و٣ - أفكار شدة الاضاءة و القدرة الكهربية", category: "شرح", lesson: "الفصل الأول - الدرس الثاني والثالث", section: "الشرح" },
-  { number: 42, sortOrder: 34, lectureNumber: 23, id: "s9F036Igt5M", title: "محاضرة ٢٣ - حل فصل ١ درس ٣", category: "شرح", lesson: "الفصل الأول - الدرس الثالث", section: "الحل", solutionGroup: "حل المذكرة" },
+  { number: 42, sortOrder: 34, lectureNumber: 23, id: "s9F036Igt5M", title: "محاضرة ٢٣ - حل فصل ١ درس ٣", category: "حل", lesson: "الفصل الأول - الدرس الثالث", section: "الحل", solutionGroup: "حل المذكرة" },
   { number: 43, sortOrder: 35, lectureNumber: 24, id: "X-8CqCy5r4Y", title: "محاضرة ٢٤ - شرح فصل ١ درس ٤ - قوانين كيرشوف", category: "شرح", lesson: "الفصل الأول - الدرس الرابع", section: "الشرح" },
   { number: 44, sortOrder: 36, lectureNumber: 25, id: "RkGbgGV5BMA", title: "محاضرة ٢٥ - شرح فصل ١ درس ٤ - تابع أفكار قوانين كيرشوف", category: "شرح", lesson: "الفصل الأول - الدرس الرابع", section: "الشرح" },
-  { number: 45, sortOrder: 38, lectureNumber: 26, id: "jT93ygktVic", title: "محاضرة ٢٦ - حل فصل ١ درس ٤", category: "شرح", lesson: "الفصل الأول - الدرس الرابع", section: "الحل", solutionGroup: "حل المذكرة" },
-  { number: 46, sortOrder: 39, lectureNumber: 27, id: "-x05tBqFP-8", title: "محاضرة ٢٧ - تابع حل فصل ١ درس ٤", category: "شرح", lesson: "الفصل الأول - الدرس الرابع", section: "الحل", solutionGroup: "حل المذكرة" },
+  { number: 45, sortOrder: 38, lectureNumber: 26, id: "jT93ygktVic", title: "محاضرة ٢٦ - حل فصل ١ درس ٤", category: "حل", lesson: "الفصل الأول - الدرس الرابع", section: "الحل", solutionGroup: "حل المذكرة" },
+  { number: 46, sortOrder: 39, lectureNumber: 27, id: "-x05tBqFP-8", title: "محاضرة ٢٧ - تابع حل فصل ١ درس ٤", category: "حل", lesson: "الفصل الأول - الدرس الرابع", section: "الحل", solutionGroup: "حل المذكرة" },
   { number: 47, sortOrder: 40, lectureNumber: 28, id: "FeAbWLzogoo", title: "محاضرة ٢٨ - تركات هامة على الفصل الأول", category: "شرح", lesson: "الفصل الأول", section: "الشرح" },
   { number: 48, sortOrder: 41, lectureNumber: 29, id: "6eXhEKR4_-s", title: "محاضرة ٢٩ - مراجعة على قوانين وملاحظات الفصل الاول", category: "شرح", lesson: "الفصل الأول", section: "الشرح" },
   { number: 49, sortOrder: 42, lectureNumber: 30, id: "ve_JawoqRD4", title: "محاضرة ٣٠ - شرح فصل ٢ درس ١", category: "شرح", lesson: "الفصل الثاني - الدرس الأول", section: "الشرح" },
-  { number: 20, sortOrder: 9, id: "nglsS4x01No", title: "حل اختبار جزئي ١", category: "حل إمتحان جزئي", lesson: "حل إمتحان جزئي", section: "الحل", solutionGroup: "حل الامتحانات الجزئية" },
-  { number: 21, sortOrder: 12, id: "twGf7a4YDxE", title: "حل اختبار جزئي ٢", category: "حل إمتحان جزئي", lesson: "حل إمتحان جزئي", section: "الحل", solutionGroup: "حل الامتحانات الجزئية" },
-  { number: 22, sortOrder: 18, id: "Ogsv63dNJag", title: "حل اختبار جزئي ٣", category: "حل إمتحان جزئي", lesson: "حل إمتحان جزئي", section: "الحل", solutionGroup: "حل الامتحانات الجزئية" },
-  { number: 23, sortOrder: 25, id: "j61lK_6vG6c", title: "حل اختبار جزئي ٤", category: "حل إمتحان جزئي", lesson: "حل إمتحان جزئي", section: "الحل", solutionGroup: "حل الامتحانات الجزئية" },
-  { number: 24, sortOrder: 26, id: "Evfj2523Mx8", title: "حل اختبار جزئي ٥", category: "حل إمتحان جزئي", lesson: "حل إمتحان جزئي", section: "الحل", solutionGroup: "حل الامتحانات الجزئية" },
-  { number: 25, sortOrder: 10, id: "8w4URdaLBoE", title: "حل امتحان شامل ١", category: "حل إمتحان شامل", lesson: "حل إمتحان شامل", section: "الحل", solutionGroup: "حل الامتحانات الشاملة" },
-  { number: 26, sortOrder: 17, id: "2ERsax0wGzw", title: "حل امتحان شامل ٢", category: "حل إمتحان شامل", lesson: "حل إمتحان شامل", section: "الحل", solutionGroup: "حل الامتحانات الشاملة" },
-  { number: 27, sortOrder: 23, id: "VX2G-TQyFCU", title: "حل امتحان شامل ٣", category: "حل إمتحان شامل", lesson: "حل إمتحان شامل", section: "الحل", solutionGroup: "حل الامتحانات الشاملة" },
-  { number: 28, sortOrder: 47, id: "gHQ6JVR7F2k", title: "محاضرة ١ — حل كتاب الامتحان — الدرس ١، أسئلة ١–١٢", category: "شرح", lesson: "محاضرة 1", section: "الحل", solutionGroup: "حل كتاب الامتحان" },
-  { number: 29, sortOrder: 48, id: "_9dS1aKNS0A", title: "حل كتاب الامتحان — الدرس ١، أسئلة ١٣–٣٤", category: "شرح", lesson: "محاضرة 1", section: "الحل", solutionGroup: "حل كتاب الامتحان" },
-  { number: 30, sortOrder: 49, id: "tUTp3iy-Yqg", title: "محاضرة ٢ — حل كتاب الامتحان — الدرس ١، أسئلة ٣١–٦٠", category: "شرح", lesson: "محاضرة 2", section: "الحل", solutionGroup: "حل كتاب الامتحان" },
-  { number: 31, sortOrder: 50, id: "56-NElO_N6k", title: "حل كتاب الامتحان — الدرس ١، أسئلة ٦١–٩٤", category: "شرح", lesson: "محاضرة 2", section: "الحل", solutionGroup: "حل كتاب الامتحان" },
-  { number: 32, sortOrder: 51, id: "fhFs_sFP6OE", title: "محاضرة ٤ — حل كتاب الامتحان — أسئلة مقالية الدرس ١", category: "شرح", lesson: "محاضرة 4", section: "الحل", solutionGroup: "حل كتاب الامتحان" },
-  { number: 33, sortOrder: 52, id: "zrOnM1Wa3cw", title: "حل أسئلة امتحانات سابقة — الدرس الأول", category: "حل إمتحان شامل", lesson: "محاضرة 4", section: "الحل", solutionGroup: "حل كتاب الامتحان" },
-  { number: 34, sortOrder: 53, id: "5w4X83rgKOM", title: "محاضرة ٥ — حل كتاب الامتحان — الدرس ٢، أسئلة ١–٤٠", category: "شرح", lesson: "محاضرة 5", section: "الحل", solutionGroup: "حل كتاب الامتحان" },
+  { number: 20, sortOrder: 9, id: "nglsS4x01No", title: "حل اختبار جزئي ١", category: "حل", lesson: "حل إمتحان جزئي", section: "الحل", solutionGroup: "حل الامتحانات الجزئية" },
+  { number: 21, sortOrder: 12, id: "twGf7a4YDxE", title: "حل اختبار جزئي ٢", category: "حل", lesson: "حل إمتحان جزئي", section: "الحل", solutionGroup: "حل الامتحانات الجزئية" },
+  { number: 22, sortOrder: 18, id: "Ogsv63dNJag", title: "حل اختبار جزئي ٣", category: "حل", lesson: "حل إمتحان جزئي", section: "الحل", solutionGroup: "حل الامتحانات الجزئية" },
+  { number: 23, sortOrder: 25, id: "j61lK_6vG6c", title: "حل اختبار جزئي ٤", category: "حل", lesson: "حل إمتحان جزئي", section: "الحل", solutionGroup: "حل الامتحانات الجزئية" },
+  { number: 24, sortOrder: 26, id: "Evfj2523Mx8", title: "حل اختبار جزئي ٥", category: "حل", lesson: "حل إمتحان جزئي", section: "الحل", solutionGroup: "حل الامتحانات الجزئية" },
+  { number: 25, sortOrder: 10, id: "8w4URdaLBoE", title: "حل امتحان شامل ١", category: "حل", lesson: "حل إمتحان شامل", section: "الحل", solutionGroup: "حل الامتحانات الشاملة" },
+  { number: 26, sortOrder: 17, id: "2ERsax0wGzw", title: "حل امتحان شامل ٢", category: "حل", lesson: "حل إمتحان شامل", section: "الحل", solutionGroup: "حل الامتحانات الشاملة" },
+  { number: 27, sortOrder: 23, id: "VX2G-TQyFCU", title: "حل امتحان شامل ٣", category: "حل", lesson: "حل إمتحان شامل", section: "الحل", solutionGroup: "حل الامتحانات الشاملة" },
+  { number: 28, sortOrder: 47, id: "gHQ6JVR7F2k", title: "محاضرة ١ — حل كتاب الامتحان — الدرس ١، أسئلة ١–١٢", category: "حل", lesson: "الفصل الأول - الدرس الأول", section: "الحل", solutionGroup: "حل كتاب الامتحان" },
+  { number: 29, sortOrder: 48, id: "_9dS1aKNS0A", title: "حل كتاب الامتحان — الدرس ١، أسئلة ١٣–٣٤", category: "حل", lesson: "الفصل الأول - الدرس الأول", section: "الحل", solutionGroup: "حل كتاب الامتحان" },
+  { number: 30, sortOrder: 49, id: "tUTp3iy-Yqg", title: "محاضرة ٢ — حل كتاب الامتحان — الدرس ١، أسئلة ٣١–٦٠", category: "حل", lesson: "الفصل الأول - الدرس الأول", section: "الحل", solutionGroup: "حل كتاب الامتحان" },
+  { number: 31, sortOrder: 50, id: "56-NElO_N6k", title: "حل كتاب الامتحان — الدرس ١، أسئلة ٦١–٩٤", category: "حل", lesson: "الفصل الأول - الدرس الأول", section: "الحل", solutionGroup: "حل كتاب الامتحان" },
+  { number: 32, sortOrder: 51, id: "fhFs_sFP6OE", title: "محاضرة ٤ — حل كتاب الامتحان — أسئلة مقالية الدرس ١", category: "حل", lesson: "الفصل الأول - الدرس الأول", section: "الحل", solutionGroup: "حل كتاب الامتحان" },
+  { number: 33, sortOrder: 52, id: "zrOnM1Wa3cw", title: "حل أسئلة امتحانات سابقة — الدرس الأول", category: "حل", lesson: "الفصل الأول - الدرس الأول", section: "الحل", solutionGroup: "حل كتاب الامتحان" },
+  { number: 34, sortOrder: 53, id: "5w4X83rgKOM", title: "محاضرة ٥ — حل كتاب الامتحان — الدرس ٢، أسئلة ١–٤٠", category: "حل", lesson: "الفصل الأول - الدرس الثاني", section: "الحل", solutionGroup: "حل كتاب الامتحان" },
   { number: 35, sortOrder: 27, id: "CnISfx_P14M", title: "محاضرة ١٩ - شرح فصل ١ درس ٣ - الجزء الأول", category: "شرح", lesson: "محاضرة 19", section: "الشرح" },
   { number: 36, sortOrder: 28, id: "ekaTYuOkjLk", title: "محاضرة ١٩ - شرح فصل ١ درس ٣ - الجزء الثاني", category: "شرح", lesson: "محاضرة 19", section: "الشرح" },
-  { number: 50, sortOrder: 31, id: "84TgA62b80A", title: "حل اختبار جزئي ٦", category: "حل إمتحان جزئي", lesson: "الاختبارات الجزئية", section: "الحل", solutionGroup: "حل الامتحانات الجزئية" },
-  { number: 51, sortOrder: 37, id: "dg_h93DBBiA", title: "حل اختبار جزئي ٧", category: "حل إمتحان جزئي", lesson: "الاختبارات الجزئية", section: "الحل", solutionGroup: "حل الامتحانات الجزئية" },
-  { number: 52, sortOrder: 45, id: "Su9uCgYUyI0", title: "حل اختبار جزئي ٨", category: "حل إمتحان جزئي", lesson: "الاختبارات الجزئية", section: "الحل", solutionGroup: "حل الامتحانات الجزئية" },
-  { number: 53, sortOrder: 43, id: "qvaSC9a-m2c", title: "حل امتحان شامل ٤", category: "حل إمتحان شامل", lesson: "الامتحانات الشاملة", section: "الحل", solutionGroup: "حل الامتحانات الشاملة" },
-  { number: 54, sortOrder: 44, id: "1b18JrUCBrE", title: "حل امتحان شامل ٥", category: "حل إمتحان شامل", lesson: "الامتحانات الشاملة", section: "الحل", solutionGroup: "حل الامتحانات الشاملة" },
+  { number: 50, sortOrder: 31, id: "84TgA62b80A", title: "حل اختبار جزئي ٦", category: "حل", lesson: "الاختبارات الجزئية", section: "الحل", solutionGroup: "حل الامتحانات الجزئية" },
+  { number: 51, sortOrder: 37, id: "dg_h93DBBiA", title: "حل اختبار جزئي ٧", category: "حل", lesson: "الاختبارات الجزئية", section: "الحل", solutionGroup: "حل الامتحانات الجزئية" },
+  { number: 52, sortOrder: 45, id: "Su9uCgYUyI0", title: "حل اختبار جزئي ٨", category: "حل", lesson: "الاختبارات الجزئية", section: "الحل", solutionGroup: "حل الامتحانات الجزئية" },
+  { number: 53, sortOrder: 43, id: "qvaSC9a-m2c", title: "حل امتحان شامل ٤", category: "حل", lesson: "الامتحانات الشاملة", section: "الحل", solutionGroup: "حل الامتحانات الشاملة" },
+  { number: 54, sortOrder: 44, id: "1b18JrUCBrE", title: "حل امتحان شامل ٥", category: "حل", lesson: "الامتحانات الشاملة", section: "الحل", solutionGroup: "حل الامتحانات الشاملة" },
 ];
 
 
@@ -155,7 +155,7 @@ const durations: Record<string, string> = {
   "qvaSC9a-m2c": "1:03:20",
   "1b18JrUCBrE": "55:07",
 };
-const sections = ["الكل", "حل كتاب الامتحان"] as const;
+const sections = ["الكل", "الشرح", "الحل", "حل الاختبارات الجزئية", "حل الاختبارات الشاملة", "حل كتاب الامتحان"] as const;
 
 const homeworkByLesson: Record<string, string> = {
   "محاضرة 1": "المذكرة: ص64، ص65 ماعدا 17 و18، وص79 المسائل من 1 إلى 4.",
@@ -211,7 +211,7 @@ function arabicDigits(value: string | number) {
 }
 
 function categoryIcon(category: Video["category"]) {
-  if (category === "حل إمتحان جزئي" || category === "حل إمتحان شامل") return <Check className="h-3.5 w-3.5" />;
+  if (category === "حل" || category === "حل إمتحان جزئي" || category === "حل إمتحان شامل") return <Check className="h-3.5 w-3.5" />;
   if (category === "أساسيات") return <FlaskConical className="h-3.5 w-3.5" />;
   return <BookOpen className="h-3.5 w-3.5" />;
 }
@@ -348,10 +348,18 @@ export default function Home() {
     const match = video.title.match(/^محاضرة\s+([٠-٩0-9]+)/);
     return video.lectureNumber ?? (match ? Number(normalizeArabicDigits(match[1])) : null);
   };
+  const filterMatches = (video: Video) => {
+    if (activeFilter === "الكل") return video.solutionGroup !== "حل كتاب الامتحان";
+    if (activeFilter === "الشرح") return video.section === "الشرح";
+    if (activeFilter === "الحل") return video.solutionGroup === "حل المذكرة";
+    if (activeFilter === "حل الاختبارات الجزئية") return video.solutionGroup === "حل الامتحانات الجزئية";
+    if (activeFilter === "حل الاختبارات الشاملة") return video.solutionGroup === "حل الامتحانات الشاملة";
+    return video.solutionGroup === "حل كتاب الامتحان";
+  };
   const visibleVideos = useMemo(() => {
     const normalized = query.trim().toLowerCase();
     return allVideos
-      .filter((video) => activeFilter === "الكل" ? video.solutionGroup !== "حل كتاب الامتحان" : activeFilter === "حل كتاب الامتحان" ? video.solutionGroup === "حل كتاب الامتحان" : video.section === activeFilter)
+      .filter(filterMatches)
             .filter((video) => !normalized || `${arabicDigits(video.title)} ${arabicDigits(video.lesson)}`.toLowerCase().includes(normalized))
       .sort((a, b) => {
         return sortNewest ? b.sortOrder - a.sortOrder : a.sortOrder - b.sortOrder;
