@@ -236,7 +236,7 @@ export default function Home() {
     }
   });
 
-  const [sortNewest, setSortNewest] = useState(false);
+  const [sortNewest, setSortNewest] = useState(true);
   const [solutionFilter, setSolutionFilter] = useState<"حل المذكرة" | "حل كتاب الامتحان" | "حل الامتحانات الجزئية" | "حل الامتحانات الشاملة" | null>(null);
   const [viewMode, setViewMode] = useState<"grid" | "list">(() => {
     try {
@@ -348,7 +348,7 @@ export default function Home() {
   const visibleVideos = useMemo(() => {
     const normalized = query.trim().toLowerCase();
     return allVideos
-      .filter((video) => activeFilter === "الكل" || (activeFilter === "حل كتاب الامتحان" ? video.solutionGroup === "حل كتاب الامتحان" : video.section === activeFilter))
+      .filter((video) => activeFilter === "الكل" ? video.solutionGroup !== "حل كتاب الامتحان" : activeFilter === "حل كتاب الامتحان" ? video.solutionGroup === "حل كتاب الامتحان" : video.section === activeFilter)
             .filter((video) => !normalized || `${video.title} ${video.lesson}`.toLowerCase().includes(normalized))
       .sort((a, b) => {
         return sortNewest ? b.sortOrder - a.sortOrder : a.sortOrder - b.sortOrder;
