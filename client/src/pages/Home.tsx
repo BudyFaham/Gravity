@@ -365,7 +365,8 @@ export default function Home() {
   }, [activeFilter, allVideos, query, solutionFilter, sortNewest]);
 
   const currentYear = new Date().getFullYear();
-  const latestVideo = allVideos.reduce((latest, video) => video.sortOrder > latest.sortOrder ? video : latest, allVideos[0]);
+  const latestLectureVideos = allVideos.filter((video) => lectureNumberOf(video) !== null);
+  const latestVideo = latestLectureVideos.reduce((latest, video) => lectureNumberOf(video)! > lectureNumberOf(latest)! ? video : latest, latestLectureVideos[0] ?? allVideos[0]);
 
   return (
     <div className="min-h-screen overflow-hidden bg-[#080b18] text-[#f7f8ff]" dir="rtl">
