@@ -36,6 +36,7 @@ type Video = {
   lesson: string;
   section: "الشرح" | "الاختبارات الجزئية" | "الامتحانات الشاملة" | "الحل";
   solutionGroup?: "حل المذكرة" | "حل كتاب الامتحان" | "حل الامتحانات الجزئية" | "حل الامتحانات الشاملة";
+  publishedAt?: string;
   duration?: string;
   homework?: string[];
   description?: string;
@@ -82,13 +83,13 @@ const videos: Video[] = [
   { number: 25, sortOrder: 10, id: "8w4URdaLBoE", title: "حل امتحان شامل ١", category: "حل", lesson: "حل إمتحان شامل", section: "الحل", solutionGroup: "حل الامتحانات الشاملة" },
   { number: 26, sortOrder: 17, id: "2ERsax0wGzw", title: "حل امتحان شامل ٢", category: "حل", lesson: "حل إمتحان شامل", section: "الحل", solutionGroup: "حل الامتحانات الشاملة" },
   { number: 27, sortOrder: 23, id: "VX2G-TQyFCU", title: "حل امتحان شامل ٣", category: "حل", lesson: "حل إمتحان شامل", section: "الحل", solutionGroup: "حل الامتحانات الشاملة" },
-  { number: 28, sortOrder: 47, id: "gHQ6JVR7F2k", title: "محاضرة ١ — حل كتاب الامتحان — الدرس ١، أسئلة ١–١٢", category: "حل", lesson: "الفصل الأول - الدرس الأول", section: "الحل", solutionGroup: "حل كتاب الامتحان" },
-  { number: 29, sortOrder: 48, id: "_9dS1aKNS0A", title: "حل كتاب الامتحان — الدرس ١، أسئلة ١٣–٣٤", category: "حل", lesson: "الفصل الأول - الدرس الأول", section: "الحل", solutionGroup: "حل كتاب الامتحان" },
-  { number: 30, sortOrder: 49, id: "tUTp3iy-Yqg", title: "محاضرة ٢ — حل كتاب الامتحان — الدرس ١، أسئلة ٣١–٦٠", category: "حل", lesson: "الفصل الأول - الدرس الأول", section: "الحل", solutionGroup: "حل كتاب الامتحان" },
-  { number: 31, sortOrder: 50, id: "56-NElO_N6k", title: "حل كتاب الامتحان — الدرس ١، أسئلة ٦١–٩٤", category: "حل", lesson: "الفصل الأول - الدرس الأول", section: "الحل", solutionGroup: "حل كتاب الامتحان" },
-  { number: 32, sortOrder: 51, id: "fhFs_sFP6OE", title: "محاضرة ٤ — حل كتاب الامتحان — أسئلة مقالية الدرس ١", category: "حل", lesson: "الفصل الأول - الدرس الأول", section: "الحل", solutionGroup: "حل كتاب الامتحان" },
-  { number: 33, sortOrder: 52, id: "zrOnM1Wa3cw", title: "حل أسئلة امتحانات سابقة — الدرس الأول", category: "حل", lesson: "الفصل الأول - الدرس الأول", section: "الحل", solutionGroup: "حل كتاب الامتحان" },
-  { number: 34, sortOrder: 53, id: "5w4X83rgKOM", title: "محاضرة ٥ — حل كتاب الامتحان — الدرس ٢، أسئلة ١–٤٠", category: "حل", lesson: "الفصل الأول - الدرس الثاني", section: "الحل", solutionGroup: "حل كتاب الامتحان" },
+  { number: 28, sortOrder: 47, id: "gHQ6JVR7F2k", publishedAt: "2026-08-13T11:28:51-07:00", title: "محاضرة ١ — حل كتاب الامتحان — الدرس ١، أسئلة ١–١٢", category: "حل", lesson: "الفصل الأول - الدرس الأول", section: "الحل", solutionGroup: "حل كتاب الامتحان" },
+  { number: 29, sortOrder: 48, id: "_9dS1aKNS0A", publishedAt: "2026-08-14T00:06:17-07:00", title: "حل كتاب الامتحان — الدرس ١، أسئلة ١٣–٣٤", category: "حل", lesson: "الفصل الأول - الدرس الأول", section: "الحل", solutionGroup: "حل كتاب الامتحان" },
+  { number: 30, sortOrder: 49, id: "tUTp3iy-Yqg", publishedAt: "2026-08-20T10:04:22-07:00", title: "محاضرة ٢ — حل كتاب الامتحان — الدرس ١، أسئلة ٣١–٦٠", category: "حل", lesson: "الفصل الأول - الدرس الأول", section: "الحل", solutionGroup: "حل كتاب الامتحان" },
+  { number: 31, sortOrder: 50, id: "56-NElO_N6k", publishedAt: "2026-08-22T10:00:29-07:00", title: "حل كتاب الامتحان — الدرس ١، أسئلة ٦١–٩٤", category: "حل", lesson: "الفصل الأول - الدرس الأول", section: "الحل", solutionGroup: "حل كتاب الامتحان" },
+  { number: 32, sortOrder: 51, id: "fhFs_sFP6OE", publishedAt: "2026-08-25T10:00:04-07:00", title: "محاضرة ٤ — حل كتاب الامتحان — أسئلة مقالية الدرس ١", category: "حل", lesson: "الفصل الأول - الدرس الأول", section: "الحل", solutionGroup: "حل كتاب الامتحان" },
+  { number: 33, sortOrder: 52, id: "zrOnM1Wa3cw", publishedAt: "2026-08-28T00:16:40-07:00", title: "حل أسئلة امتحانات سابقة — الدرس الأول", category: "حل", lesson: "الفصل الأول - الدرس الأول", section: "الحل", solutionGroup: "حل كتاب الامتحان" },
+  { number: 34, sortOrder: 53, id: "5w4X83rgKOM", publishedAt: "2026-09-14T05:23:52-07:00", title: "محاضرة ٥ — حل كتاب الامتحان — الدرس ٢، أسئلة ١–٤٠", category: "حل", lesson: "الفصل الأول - الدرس الثاني", section: "الحل", solutionGroup: "حل كتاب الامتحان" },
   { number: 35, sortOrder: 27, id: "CnISfx_P14M", title: "محاضرة ١٩ - شرح فصل ١ درس ٣ - الجزء الأول", category: "شرح", lesson: "محاضرة 19", section: "الشرح" },
   { number: 36, sortOrder: 28, id: "ekaTYuOkjLk", title: "محاضرة ١٩ - شرح فصل ١ درس ٣ - الجزء الثاني", category: "شرح", lesson: "محاضرة 19", section: "الشرح" },
   { number: 50, sortOrder: 31, id: "84TgA62b80A", title: "حل اختبار جزئي ٦", category: "حل", lesson: "الاختبارات الجزئية", section: "الحل", solutionGroup: "حل الامتحانات الجزئية" },
@@ -362,6 +363,12 @@ export default function Home() {
       .filter(filterMatches)
             .filter((video) => !normalized || `${arabicDigits(video.title)} ${arabicDigits(video.lesson)}`.toLowerCase().includes(normalized))
       .sort((a, b) => {
+        const aIsExamBook = a.solutionGroup === "حل كتاب الامتحان";
+        const bIsExamBook = b.solutionGroup === "حل كتاب الامتحان";
+        if (aIsExamBook && bIsExamBook && a.publishedAt && b.publishedAt) {
+          const byPublishedAt = Date.parse(a.publishedAt) - Date.parse(b.publishedAt);
+          return sortNewest ? -byPublishedAt : byPublishedAt;
+        }
         return sortNewest ? b.sortOrder - a.sortOrder : a.sortOrder - b.sortOrder;
       });
   }, [activeFilter, allVideos, query, solutionFilter, sortNewest]);
